@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    width: min(1240px, calc(100% - 40px));
+    margin: 0 auto;
+}
+.text-primary{
+    background: linear-gradient(to right, #fba24f, #ff1e1e);
+    background-clip: text;
+    color: transparent;
+}
+.btn-primary{
+    display: inline-block;
+    background: linear-gradient(to right, #fba24f, #ff1e1e);
+    padding: 15px 25px;
+    border-radius: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.text-gray-900{
+    color: #18191f;
+}
+.text-center{
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+section{
+    margin: 50px auto !important;
+}
+p{
+    font-size: 1.125em;
+}
+.banner{
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    & .banner-content{
+        & h1, & p{
+            margin-bottom: 20px;
+        }
+        & h1{
+            font-size: 3.75em;
+        }
+        & p{
+            font-size: 1.25em;
+        }
+    }
+    & img.banner-image{
+        width: 500px;
+    }
+}
+.about{
+    background-image: url(images/shapes/7.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    & .about-container{
+        align-items: center;
+        gap: 100px;
+        & img{
+            width: 500px;
+        }
+        & h3, & p{
+            margin-bottom: 30px;
+        }
+        & h3{
+            color: #707070;
+            font-size: 2.5em;
+        }
+    }
+}
+.recipe{
+    & .recipe-head{
+        max-width: 700px;
+        margin: 0 auto;
+        & h3, & p{
+            margin-bottom: 30px;
+        }
+        & h3{
+            color: #676767;
+            font-size: 2.25em;
+        }
+        & p{
+            color: #252525;
+        }
+    }
+    & .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        & .card{
+            background-color: #fff;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, .15);
+            padding: 30px;
+            border-radius: 30px;
+            & img, & h4{
+                margin-bottom: 10px;
+            }
+            & img{
+                width: 100%;
+            }
+            & h4{
+                font-weight: 800;
+                font-size: 28px;
+            }
+        }
+    }
+}
+.stats .stat-list{
+    background-color: #fff;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, .15);
+    padding: 30px;
+    border-radius: 30px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    & .item span{
+        display: block;
+        &.item-title{
+            font-size: 48px;
+            font-weight: 700;
+        }
+    }
+}
+footer{
+    background-color: #0b0d17;
+    padding: 30px 20px;
+    & h3{
+        color: #5b5b5b;
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-family: "Manrope", sans-serif;
+    }
+    & p{
+        color: #fff;
+    }
+}
+@media screen and (max-width: 992px){
+    .banner, .about-container{
+        flex-direction: column;
+        & img{
+            max-width: 100%;
+        }
+    }
+    .about-container{
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .recipe .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 575px){
+    .recipe .cards{
+        grid-template-columns: 1fr;
+    }
+    .stats .stat-list{
+        flex-direction: column;
+    }
+}
